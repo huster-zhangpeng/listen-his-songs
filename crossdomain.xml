@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<cross-domain-policy>
+   <allow-access-from domain="*.qq.com" secure="false" />
+   <allow-access-from domain="*.soso.com" secure="false" />
+   <allow-access-from domain="*.paipai.com" secure="false" />
+   <allow-access-from domain="*.gtimg.cn" secure="false" />
+   <allow-access-from domain="*.pengyou.com" secure="false" />
+</cross-domain-policy>

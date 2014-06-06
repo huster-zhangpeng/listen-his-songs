@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="css/style.css" type="text/css" />
+	<!-- <link rel="stylesheet" href="css/jPlayer.css" type="text/css"> -->
+	<link href="css/jplayer.pink.flag.css" rel="stylesheet" type="text/css">
+	<link href="css/jquery-ui.css" rel="stylesheet" type="text/css"/>
+	<link rel="stylesheet" href="css/uploadify.css" type="text/css" />
+	<script type="text/javascript" src="js/config.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
+	<script type="text/javascript" src="js/jquery.uploadify-3.1.js"></script>
+	<script type="text/javascript" charset="utf-8" src="http://fusion.qq.com/fusion_loader?appid=24341&platform=qzone"></script>
+	<script type="text/javascript" src="js/jplayer.js"></script>
+	<script type="text/javascript" src="js/openapi.js"></script>
+	</head>
+<body>
+	<div id="main">
+
+		<div id="left">
+			<div id="friendlist">
+				<p id="title">好友列表</p>
+				<ul id="friendUl">
+					<li class="grouping"><span class="friendtitle">所有好友</span>
+						<ul class="list ui-helper-reset ui-helper-clearfix" id="allfriends">
+							
+						</ul>
+					</li>
+				</ul>
+				<div id="addgroup">
+					<span>添加分组</span>
+					<input type="text" name="groupname" id="groupname"/>
+				</div>
+			</div>
+			<div id="addrmove">
+				<a href="#"><img src="image/delete.png" alt="" /></a>
+				<a href="#" id="invite"><img src="image/add.png" alt="" /></a>
+			</div>	
+		</div>
+		<div id="middle">
+			<div id="container">
+			    <div id="content_main">
+			        <section>
+			            <div id="jquery_jplayer_1" class="jp-jplayer" style="width: 0px; height: 0px; ">
+							<img id="jp_poster_0" style="width: 0px; height: 0px; display: none; "/>
+			                <audio id="jp_audio_0" preload="metadata" src="http://www.jplayer.org/audio/ogg/TSP-05-Your_face.ogg"></audio>
+			            </div>
+			            <div id="jp_container_1" class="jp-audio">
+			                <div class="jp-type-playlist">
+			                    <div class="jp-gui jp-interface">
+			                        <ul class="jp-controls">
+			                            <li><a href="javascript:;" class="jp-previous" tabindex="1">previous</a></li>
+			                            <li><a href="javascript:;" class="jp-play" tabindex="1" style="display: none; ">play</a></li>
+			                            <li><a href="javascript:;" class="jp-pause" tabindex="1" style="display: block; ">pause</a></li>
+			                            <li><a href="javascript:;" class="jp-next" tabindex="1">next</a></li>
+			                            <li><a href="javascript:;" class="jp-stop" tabindex="1">stop</a></li>
+			                        </ul>
+			                        <div id="jp-music-title">
+			                        	<h2 id="title1">听好友的歌</h2>
+			                        </div>
+			                        <div class="jp-progress">
+			                            <div class="jp-seek-bar" style="width: 100%; ">
+			                                <div class="jp-play-bar" style="width: 17.52811811944375%; "></div>
+			                            </div>
+			                        </div>
+									<div class="jp-current-time">00:30</div>
+			                        <div class="jp-duration">02:56</div>
+			                        <div class="volume">
+				                        <div class="jp-volume-bar">
+				                            <div class="jp-volume-bar-value"></div>
+				                        </div>
+			                        </div>
+			                        <div class="jp-toggles"><a href="javascript:;" id="repeat"><img src="image/jp-shuffle-off.png" alt="loop"></a>
+			                        	<ul class="jp-toggles-list" style="display:none">
+			                        		<li><a href="javascript:;" class="jp-shuffle" tabindex="1" title="shuffle">随机播放</a></li>
+				                            <li><a href="javascript:;" class="jp-shuffle-off" tabindex="1" title="shuffle off">顺序播放</a></li>
+				                            <li><a href="javascript:;" class="jp-repeat" tabindex="1" title="repeat">重复播放</a></li>
+			                        	</ul>
+			                        </div>
+			                    </div>
+			                    <div id="search">
+									<input type="text" id="search-text" value="输入你想要的音乐"/>
+									<input type="submit" id="search-sub" value="" />
+								</div>
+			                    <div class="jp-playlist" id="playlist">
+			                        <ul style="display: block; ">
+			                            <li class="">
+			                                <div><a href="javascript:;" class="jp-playlist-item-remove" >×</a><a href="javascript:;" class="jp-playlist-item" tabindex="1">Cro Magnon Man</a></div>
+			                            </li>
+			                        </ul>
+			                    </div>
+
+								<div class="jp-playlist"  style="display: none;" id="list_all">
+
+									<ul>
+									</ul>
+								</div>
+			                </div>
+			            </div>
+			        </section>
+			    </div>
+				<div id="listbottom">
+					<button id="return" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">返回我的</button>
+					<select name="" id="last" class="ui-widget ui-state-default ui-corner-all ui-button-text-only">
+						<option value="times_5d">最近5天</option>
+						<option value="times_10d">最近10天</option>
+						<option value="times_15d">最近15天</option>
+						<option value="times_30d">最近30天</option>
+					</select>
+					<!--  <button id="publish-weibo">发表微博</button> -->
+					<button id="ownSong" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">自助歌曲</button>
+					<button id="publish-ss" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">发表说说</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<hr/>
+		<p>《听别人的歌》由华中科技大学张鹏和张鹏宇、陈宏智提供，如果您遇到问题请发送微博分享，或者发邮件给我们，谢谢使用！</p>
+		<p>电子邮件:935789181@qq.com&nbsp;&nbsp;844727336@qq.com&nbsp;&nbsp;799887462@qq.com</p>
+	</div>
+	<div class="contextMenu" id="myMenu1">
+		<ul>
+			<li id="group_rename">重命名</li>
+			<li id="group_delete">删除分组</li>
+		</ul>
+    </div>
+	<div id="provideSong" style="display:block">
+		<p>
+			<h2>提示：</h2>
+			<p id="tip" style="text-indent: 2em;">
+			当你有一首歌曲的链接时,可以只提供链接即可.当然,你也可以选择上传一首歌给我们.两者都需要您提供精确的歌名,歌手名和专辑信息,以便您与他人一起分享.
+			</p>
+		</p>
+	</div>
+	<div id="uploadSong" title="上传歌曲" style="display:block">
+		<form>
+			<p>
+				请点击下面的按钮选择要上传的文件(目前仅支持mp3)
+				<input type="file" name="uploadFile" id="uploadFile" value="" />
+			</p>
+			<p>
+				歌曲名:<input type="text" name="name" id="uploadSongName" class="aboutSong" value=""/>
+			</p><br/>
+			<p>
+				歌手:<input type="text" name="singer" id="uploadSingerName" class="aboutSong" value="" />
+			</p><br/>
+			<p>
+				专辑:<input type="text" name="album" id="uploadAlbumName" class="aboutSong" value="" />
+			</p>
+		</form>
+	</div>
+	<div id="linkSong" title="链接歌曲" style="display:none">
+		<form>
+			<h2>请输入一个有效的歌曲链接.</h2>
+			<hr/><br/>
+			<p>
+				歌曲Url:<input type="text" name="src" id="linkSongSrc" class="aboutSong" value=""/>
+			</p><br/>
+			<p>
+				歌曲名:<input type="text" name="name" id="linkSongName" class="aboutSong" value=""/>
+			</p><br/>
+			<p>
+				歌手:<input type="text" name="singer" id="linkSingerName" class="aboutSong" value="" />
+			</p><br/>
+			<p>
+				专辑:<input type="text" name="album" id="linkAlbumName" class="aboutSong" value="" />
+			</p>
+		</form>
+	</div>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

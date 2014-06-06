@@ -1,0 +1,384 @@
+@import "lionbars.css";
+/*css reset*/
+body, div, dl, dt, dd, ul, ol, li,
+h1, h2, h3, h4, h5, h6, pre, code,
+form, fieldset, legend, input, button,
+textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+img {
+    border: 0;
+}
+:focus {
+    outline: 0;
+}
+h1, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+input, button, textarea,
+select, optgroup, option {
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+}
+ol, ul {
+    list-style: none;
+}
+:link, :visited , ins {
+    text-decoration: none;
+}
+/*main css*/
+body{
+	font-family: "宋体", Arial, Helvetica, sans-serif ; 
+	font-size:  12px;
+	line-height: 18px;
+	background-color: #ECEEEA;
+	width:736px;
+	margin:0 auto;
+	padding: 20px 2px 0 22px;
+}
+#main{
+	overflow:hidden;
+}
+
+/*left part*/
+#left{
+	width: 174px;
+	float: left;
+}
+#userhead{
+	float: left;
+	width: 69px;
+	height: 69px;
+	margin-right: 10px;
+}
+#friendlist{
+	background-color: #3A3A3A;
+	width: 172px;
+	height: 470px;
+	margin: 0 auto;
+	color: #CFCFCF;
+	overflow: auto;
+	margin-top: 10px;
+}
+.removefriend{
+	float:right;
+	width:20px;
+	display:block;
+	margin-right:10px;
+}
+#title{
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 26px;
+	padding-left: 10px;
+	border-bottom: 1px #000 solid;
+}
+.grouping{
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 24px;
+	border-bottom: 1px #000 solid;	
+	padding-left: 3px;
+}
+ #addgroup{
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 24px;
+	height:24px;
+	border-bottom: 1px #000 solid;	
+	padding-left:30px;
+	background: url(../image/addgroup.png) 8px 4px no-repeat;
+}
+.friendtitle{
+	background: url(../image/unfold.png) 5px 4px no-repeat;
+	padding:0 30px;
+	line-height: 24px;
+	cursor:pointer;
+	width:109px;
+	display:block;
+	overflow:hidden;
+}
+#addgroup input{
+	width:110px;
+	margin-top:3px;
+}
+.list{
+	display: none;
+}
+.choose{
+	background: url(../image/fold.png) 5px 4px no-repeat;
+}
+.list li{
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 24px;
+	padding: 5px 0;
+}
+.panel{
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 24px;
+	display: none;
+}
+.list li img{
+	height: 24px;
+	width:24px;
+	margin-right: 10px;
+	float: left;	
+}
+.musicname{
+	background: url(../image/music.png) left center no-repeat;
+	padding-left: 22px;
+	margin-left: 10px;
+	line-height: 20px;
+	color: #FFF;
+}
+#addrmove{
+	background-color: #4B4A4A;
+	width: 100%;
+	height: 40px;
+}
+#posting{
+   color: #FFFFFF;
+   cursor: pointer; 
+}
+
+#addrmove img{
+	float: right;
+	margin: 20px 10px 10px 0 ;
+}
+/*middle part*/
+#middle{
+	width: 522px;
+	float: left;
+	margin: 0 20px;
+}
+#play{
+	height: 88px;
+}
+#palybutton, #palybar{
+	float: left;
+}
+#palybar{
+	margin-left: 30px;
+}
+#palybar h2{
+	float: left;
+	font-size: 28px;
+}
+#palybar h3{
+	float: left;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 6px 0 0 5px;
+}
+/*#content_main{
+	height:85px;
+}*/
+#start{
+	width: 200px;
+	height: 10px;
+	background: red;
+	float: left;
+}
+#dot{
+	float: left;
+	margin-top: -2px;
+}
+#end{
+	width: 100px;
+	height: 10px;
+	background: #878787;
+	float: left;
+}
+#bar{
+	height: 15px;
+	margin-top: 20px;
+}
+#starttime{
+	float: left;
+}
+#endtime{
+	float: right;
+}
+#sound{
+	padding: 15px 0 0 14px;
+	float: left;
+}
+#listtitle{
+	line-height: 25px;
+	float: left;
+}
+#search{
+	background: url(../image/top.png) no-repeat;
+	height: 27px;
+	width: 521px;
+	margin-top: 10px;
+	float: left;
+	font-size: 12px;}
+#search-text{
+	float: right;
+	width: 144px;	line-height: 22px;
+	height: 25px;
+	background: url(../image/search.png) no-repeat;
+	border: none;
+	font-size: 12px;
+	padding:1px 6px 0 10px;
+}
+#search-sub{
+	width: 30px;
+	height: 25px;
+	background: url(../image/enter.png) 0 7px no-repeat;
+	border: none;
+	font-size: 12px;
+	float: right;
+	position: relative;
+	left: 165px;
+	cursor: pointer;
+}
+.jp-playlist{
+	background: #3a3a3a;
+	overflow: auto;
+	height: 373px;
+}
+.jp-toggles-list{
+	position: relative;
+	display: block;
+	float: left;
+	color: #000;
+	top: -50px;
+	left: 335px;
+	font-size:11px;
+}
+.jp-toggles-list li{
+	border: 1px solid #000;
+	background-color: #FFF;
+	padding: 2px 3px;
+	cursor: pointer;
+}
+#playlist ul{
+	padding: 0;
+}
+.button{
+	line-height: 25px;
+	background-color: #878787;
+	float: left;
+}
+.list1{
+	padding-left: 10px;
+	width: 230px;
+	float: left;
+	cursor: pointer;
+}
+.list2{
+	width: 145px;
+	float: left;
+	cursor: pointer;
+}
+.list3{
+	width: 80px;
+	float: left;
+	cursor: pointer;
+}
+.list4{
+	width: 124px;	float: left;	cursor: pointer;}.onthis{
+	line-height: 25px;
+	background-color: #0000FF;
+	float: left;
+}
+#listbottom{
+	width: 501px;
+	color: #000000;
+	padding: 0 10px;
+	float: left;
+	line-height: 28px;
+	background-color: #878787;
+}
+#listbottom p{
+	float: left;
+}
+#last{
+	background: url(../image/lately.png) left center no-repeat;
+	padding-left: 10px;
+	margin: 1px 25px 0 20px;
+	border: none;
+	height: 30px;
+	float: left;
+}
+#return{
+	height: 30px;
+	padding: 0 10px;
+	float: left;
+}
+#ownSong{
+	height: 30px;
+	padding: 0 10px;
+	margin-right: 25px;
+}
+#publish-ss{
+	height: 30px;
+	padding: 0 10px;
+}
+#delete{
+	background: url(../image/delete2.png) left center no-repeat;
+	padding-left: 24px;
+}
+
+/*clear*/
+.clear{
+	clear: both;
+}
+#addtapp{
+	height: 30px;
+	padding:0 10px;
+	margin-left:10px;
+}
+/*dialog*/
+#dialog{
+	padding-top:25px;
+}
+#dialog p{
+	line-height:24px;
+	display:block;
+	margin-bottom:10px;
+}
+h2{
+	margin-bottom: 10px;
+}
+.aboutSong{
+	float: right;
+	margin-right: 140px;
+}
+div#defaultface{
+	margin: 0;
+	padding: 0;
+}
+div#footer{
+	color: #77C;
+	font: 12px arial;
+	text-align: center;
+}
+div#facebox{
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	border-top: 1px solid #DFE6F6;
+	border-left: 1px solid #DFE6F6;
+}
+#facebox img{
+	display: block;
+	float: left;
+	width: 26px;
+	height: 26px;
+	line-height: 26px;
+	border-right: 1px solid #DFE6F6;
+	border-bottom: 1px solid #DFE6F6;
+}
+
+/*#content_main{
+	overflow: hidden;
+}*/
